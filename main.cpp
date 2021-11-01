@@ -31,7 +31,7 @@ public:
     int calculPret();
 
     // Operator <<
-    friend std::ostream& operator<<(std::ostream& os, Prajitura& prajitura);
+    friend std::ostream& operator<<(std::ostream& os, const Prajitura& prajitura);
 };
 
 Prajitura::Prajitura()
@@ -52,7 +52,10 @@ Prajitura::Prajitura(const std::string& nume, const int& timp, const int& pretB,
 
 Prajitura::Prajitura(const Prajitura &copie)
 {
-    std::cout<<"Constructor de copiere - Prajitura\n";
+    this->nume = copie.nume;
+    this->numarBucati = copie.numarBucati;
+    this->timpPreparare = copie.timpPreparare;
+    this->pretBucata = copie.pretBucata;
 }
 
 Prajitura& Prajitura::operator=(const Prajitura &copie)
@@ -72,7 +75,7 @@ int Prajitura::calculPret()
     return pretBucata*numarBucati;
 }
 
-std::ostream& operator<<(std::ostream& os, Prajitura& prajitura)
+std::ostream& operator<<(std::ostream& os, const Prajitura& prajitura)
 {
     os<<"Prajitura: "<<prajitura.nume<<"\nPret Bucata: "<<prajitura.pretBucata<<"\nNumar Bucati: "<<prajitura.numarBucati<<"\nTimp Preparare: "<<prajitura.timpPreparare<<" min.\n";
     return os;
@@ -89,7 +92,7 @@ public:
     Comanda(const int &nr, const bool &laPachet, const std::vector<Prajitura> &prajituri);
 
     // Operator<<
-    friend std::ostream& operator<<(std::ostream& os, Comanda &comanda);
+    friend std::ostream& operator<<(std::ostream& os, const Comanda &comanda);
 
     // Functii
     int pretTotal();
@@ -102,7 +105,7 @@ Comanda::Comanda(const int &nr, const bool &laPachet, const std::vector<Prajitur
     prajituri = prajiturele;
 }
 
-std::ostream& operator<<(std::ostream& os, Comanda &comanda)
+std::ostream& operator<<(std::ostream& os, const Comanda &comanda)
 {
     if(comanda.laPachet)
         os<<"Numarul comenzii: "<<comanda.numar<<"\nComanda trebuie livrata";
@@ -116,11 +119,9 @@ int Comanda::pretTotal()
 {
     int pretTotal = 0;
     int pretPrajitura;
-    for(auto p = prajituri.begin(); p != prajituri.end(); p++)  // Am incercat si p+=sizeof(Prajitura) si iesea din vector
+    for(auto p = prajituri.begin(); p != prajituri.end(); p++)
     {
         pretPrajitura = (*p).calculPret();
-        std::cout<<"########Prajitura: "<<*p<<"\n########\n";
-        std::cout<<"########Pret prajitura: "<<pretPrajitura<<"\n########\n";
         pretTotal += pretPrajitura;
     }
 
@@ -130,31 +131,30 @@ int Comanda::pretTotal()
     return pretTotal;
 }
 
-class data{
-private:
-    int zi;
-    std::string luna;
+class Angajat{
+    std::string nume;
+    std::string prenume;
+    int salariu;
+    int oreZi;
 
 public:
-    data();
-    data(const int &zi, const std::string &luna);
-    friend std::ostream& operator<<(std::ostream& os, data &data_);
+    Angajat(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_);
+
+    friend std::ostream &operator<<(std::ostream &os, const Angajat &angajat);
+
 };
 
-data::data()
+Angajat::Angajat(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_)
 {
-    zi = 1;
-    luna = "Ianuarie";
-}
-data::data(const int &zi_, const std::string &luna_)
-{
-    zi = zi_;
-    luna = luna_;
+    this->nume = nume_;
+    this->prenume = prenume_;
+    this->salariu = salariu_;
+    this->oreZi = oreZi_;
 }
 
-std::ostream& operator<<(std::ostream& os, data &data_)
-{
-    os<<data_.zi<<" "<<data_.luna;
+std::ostream &operator<<(std::ostream &os, const Angajat &angajat) {
+    os <<"Nume angajat: "<<angajat.nume<<"\nPrenume angajat: "<<angajat.prenume<<"\nSalariu: "<<angajat.salariu
+       <<"\nNr de ore lucrate pe zi: "<<angajat.oreZi;
     return os;
 }
 
@@ -186,18 +186,13 @@ int main() {
     int pretComanda1 = comanda1.pretTotal();
     int pretComanda2 = comanda2.pretTotal();
 
-    //Nu functioneaza :(
-    //std::cout<<"Pret comanda 1: "<<pretComanda1<<"\nPret Comanda 2: "<<pretComanda2<<"\n";
+    std::cout<<"Pret comanda 1: "<<pretComanda1<<"\nPret Comanda 2: "<<pretComanda2<<"\n";
     std::cout<<"\nComanda 1: "<<comanda1<<"\nComanda 2: "<<comanda2<<"\n";
 
-//  Verificare class data
-
-    std::cout<<"\n\n\n\n";
-    data data1;
-    std::cout<<data1<<"\n";
-    data data2(27, "Noiembrie");
-    std::cout<<data2<<"\n";
-
+//  Verificare clasa Angajat
+    Angajat angajat("Alune","Gilbert", 2500, 6);
+    std::cout<<"\n\n\n";
+    std::cout<<angajat<<"\n";
     return 0;
 
 }
