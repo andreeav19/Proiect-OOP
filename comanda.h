@@ -7,6 +7,7 @@
 
 
 #include <vector>
+#include <memory>
 #include "prajitura.h"
 
 class Comanda{

@@ -17,7 +17,7 @@ Angajat::Angajat() {
 }
 
 
-Angajat::Angajat(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_)
+Angajat::Angajat(const std::string &nume_, const std::string &prenume_, const int salariu_, const int oreZi_)
 {
     this->nume = nume_;
     this->prenume = prenume_;

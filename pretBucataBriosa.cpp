@@ -18,6 +18,8 @@ float calculAroma(float pretBucata, const aromeBriosa& aroma)
         case aromeBriosa::VANILIE:
             return pretBucata - 1;
     }
+
+    return 9999;
 }
 
 float calculSprinkles(float pretBucata, const sprinklesBriosa& sprinkles)
@@ -32,6 +34,8 @@ float calculSprinkles(float pretBucata, const sprinklesBriosa& sprinkles)
         case sprinklesBriosa::SPRINKLES_STELUTE:
             return pretBucata + 0.4;
     }
+
+    return 9999;
 }
 
 float calculCrema(float pretBucata, const cremeBriosa& crema)
@@ -50,4 +54,6 @@ float calculCrema(float pretBucata, const cremeBriosa& crema)
         case cremeBriosa::ZMEURA:
             return pretBucata + 2.8;
     }
+
+    return 9999;
 }

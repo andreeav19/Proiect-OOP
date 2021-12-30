@@ -22,7 +22,7 @@ protected:
 
 public:
     Angajat();
-    Angajat(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_);
+    Angajat(const std::string &nume_, const std::string &prenume_, int salariu_, int oreZi_);
     Angajat(const Angajat &copie);
     Angajat& operator=(const Angajat &copie);
     virtual ~Angajat();

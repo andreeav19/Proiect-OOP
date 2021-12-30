@@ -20,7 +20,7 @@ protected:
 
 public:
     Prajitura();
-    Prajitura(const std::string& nume, const int& timp, const int& numarB);
+    Prajitura(const std::string& nume, int timp, int numarB);
     Prajitura(const Prajitura &copie);
     Prajitura& operator=(const Prajitura &copie);
     virtual ~Prajitura();

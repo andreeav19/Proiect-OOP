@@ -15,8 +15,8 @@ Tort::Tort() : Prajitura(){
     crema = cremeTort::CIOCOLATA_CREMA;
 }
 
-Tort::Tort(const std::string& nume, const int& timp, const int& numarB,
-           const int& nrStrat, const std::vector<aromeBlat> &arome, const std::vector<decoratiuni> &dec, const cremeTort& cremaT)
+Tort::Tort(const std::string& nume, const int timp, const int numarB,
+           const int nrStrat, const std::vector<aromeBlat> &arome, const std::vector<decoratiuni> &dec, const cremeTort& cremaT)
         : Prajitura(nume, timp, numarB){
     if(nrStrat != arome.size())
         throw std::runtime_error("Numarul de straturi nu coincide cu numarul de arome.");
@@ -45,10 +45,7 @@ Tort::Tort(const Tort &copie) : Prajitura(copie){
 Tort &Tort::operator=(const Tort &copie) {
     if(this != &copie)
     {
-        this->nume = copie.nume;
-        this->numarBucati = copie.numarBucati;
-        this->timpPreparare = copie.timpPreparare;
-        this->pretBaza = copie.pretBaza;
+        Prajitura::operator=(copie);
         this->nrStraturi = copie.nrStraturi;
         this->straturi = copie.straturi;
         this->decor = copie.decor;

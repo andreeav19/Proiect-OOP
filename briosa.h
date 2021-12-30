@@ -20,13 +20,13 @@ class Briosa : public Prajitura {
     cremeBriosa crema;
 public:
     Briosa();
-    Briosa(const std::string& nume, const int& timp, const int& numarB,
+    Briosa(const std::string& nume, int timp, int numarB,
            const aromeBriosa& aroma, const sprinklesBriosa& sprinklesBriosa, const cremeBriosa& cremaBriosa);
     Briosa(const Briosa &copie);
     Briosa& operator=(const Briosa &copie);
-    ~Briosa();
+    ~Briosa() override;
 
-    float calculPret() const;
+    float calculPret() const override;
 };
 
 

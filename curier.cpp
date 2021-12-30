@@ -10,8 +10,8 @@ Curier::Curier() : Angajat(){
     nrInmatriculare = "numar inmatriculare";
 }
 
-Curier::Curier(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_,
-               const int &idComanda, const std::string &nrInm)
+Curier::Curier(const std::string &nume_, const std::string &prenume_, const int salariu_, const int oreZi_,
+               const int idComanda, const std::string &nrInm)
         : Angajat(nume_, prenume_, salariu_, oreZi_){
     this->id_comanda = idComanda;
     this->nrInmatriculare = nrInm;
@@ -26,10 +26,7 @@ Curier::Curier(const Curier &copie) : Angajat(copie){
 Curier &Curier::operator=(const Curier &copie) {
     if(this != &copie)
     {
-        this->nume = copie.nume;
-        this->prenume = copie.prenume;
-        this->salariuLunar = copie.salariuLunar;
-        this->oreZi = copie.oreZi;
+        Angajat::operator=(copie);
         this->id_comanda = copie.id_comanda;
         this->nrInmatriculare = copie.nrInmatriculare;
     }

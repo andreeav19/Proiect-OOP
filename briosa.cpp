@@ -16,7 +16,7 @@ Briosa::Briosa() {
     crema = {cremeBriosa::VANILIE };
 }
 
-Briosa::Briosa(const std::string &nume, const int &timp, const int &numarB, const aromeBriosa& aromaBriosa,
+Briosa::Briosa(const std::string &nume, const int timp, const int numarB, const aromeBriosa& aromaBriosa,
                const sprinklesBriosa& sprinklesBriosa, const cremeBriosa& cremaBriosa)
         : Prajitura(nume, timp, numarB){
     this->pretBaza = 3;
@@ -34,10 +34,7 @@ Briosa::Briosa(const Briosa &copie) : Prajitura(copie)  {
 Briosa &Briosa::operator=(const Briosa &copie) {
     if(this != &copie)
     {
-        this->nume = copie.nume;
-        this->numarBucati = copie.numarBucati;
-        this->timpPreparare = copie.timpPreparare;
-        this->pretBaza = copie.pretBaza;
+        Prajitura::operator=(copie);
         this->aroma = copie.aroma;
         this->sprinkles = copie.sprinkles;
         this->crema = copie.crema;

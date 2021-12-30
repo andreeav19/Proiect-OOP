@@ -14,11 +14,11 @@ class Curier : public Angajat{
 
 public:
     Curier();
-    Curier(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_,
-           const int &idComanda, const std::string &nrInm);
+    Curier(const std::string &nume_, const std::string &prenume_, int salariu_, int oreZi_,
+           int idComanda, const std::string &nrInm);
     Curier(const Curier &copie);
     Curier& operator=(const Curier &copie);
-    ~Curier();
+    ~Curier() override;
 
     friend std::ostream &operator<<(std::ostream &os, const Curier &curier);
 };

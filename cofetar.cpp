@@ -11,8 +11,8 @@ Cofetar::Cofetar() : Angajat() {
     this->nrPrajituri = 30;
 }
 
-Cofetar::Cofetar(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_,
-                 const int& nrPraji) : Angajat(nume_, prenume_, salariu_, oreZi_){
+Cofetar::Cofetar(const std::string &nume_, const std::string &prenume_, const int salariu_, const int oreZi_, const int nrPraji)
+                 : Angajat(nume_, prenume_, salariu_, oreZi_){
     this->nrPrajituri = nrPraji;
 }
 
@@ -23,10 +23,7 @@ Cofetar::Cofetar(const Cofetar &copie) : Angajat(copie){
 Cofetar &Cofetar::operator=(const Cofetar &copie) {
     if(this != &copie)
     {
-        this->nume = copie.nume;
-        this->prenume = copie.prenume;
-        this->salariuLunar = copie.salariuLunar;
-        this->oreZi = copie.oreZi;
+        Angajat::operator=(copie);
         this->nrPrajituri = copie.nrPrajituri;
     }
     return *this;

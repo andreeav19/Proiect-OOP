@@ -15,7 +15,7 @@ Prajitura::Prajitura(){
     id_max++;
 }
 
-Prajitura::Prajitura(const std::string& nume, const int& timp, const int& numarB)
+Prajitura::Prajitura(const std::string& nume, const int timp, const int numarB)
 {
     this->nume = nume;
     this->timpPreparare = timp;

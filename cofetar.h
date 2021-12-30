@@ -14,8 +14,7 @@ class Cofetar : public Angajat{
 
 public:
     Cofetar();
-    Cofetar(const std::string &nume_, const std::string &prenume_, const int &salariu_, const int &oreZi_,
-            const int &nrPraji);
+    Cofetar(const std::string &nume_, const std::string &prenume_, int salariu_, int oreZi_, int nrPraji);
     Cofetar(const Cofetar &copie);
     Cofetar& operator=(const Cofetar &copie);
     ~Cofetar() override;

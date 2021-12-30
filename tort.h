@@ -6,7 +6,7 @@
 #define PROIECT_OOP_TORT_H
 
 
-#include "Prajitura.h"
+#include "prajitura.h"
 #include <vector>
 
 enum class aromeBlat { CIOCOLATA, CAFEA_CIOCOLATA, ROM_CIOCOLATA, VANILIE, MORCOVI};
@@ -21,11 +21,11 @@ class Tort : public Prajitura {
 
 public:
     Tort();
-    Tort(const std::string& nume, const int& timp, const int& numarB,
-         const int& nrStrat, const std::vector<aromeBlat> &arome, const std::vector<decoratiuni> &dec, const cremeTort& cremaT);
+    Tort(const std::string& nume, int timp, int numarB,
+         int nrStrat, const std::vector<aromeBlat> &arome, const std::vector<decoratiuni> &dec, const cremeTort& cremaT);
     Tort(const Tort& copie);
     Tort& operator=(const Tort& copie);
-    ~Tort();
+    ~Tort() override;
 
     float calculPret() const override;
 };

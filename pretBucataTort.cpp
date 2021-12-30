@@ -50,7 +50,6 @@ float calculDecor(float pretBucata, const std::vector<decoratiuni>& decor)
             case decoratiuni::MARTIPAN:
                 pretBucata += 8;
                 break;
-
         }
     }
 
