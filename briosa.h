@@ -8,7 +8,7 @@
 
 
 #include <vector>
-#include "Prajitura.h"
+#include "prajitura.h"
 
 enum class aromeBriosa { CIOCOLATA, PORTOCALE, CIOCOLATA_ROM, LAMAIE, VANILIE};
 enum class sprinklesBriosa { FARA_SPRINKLES, SPRINKLES_CIOCOLATA, SPRINKLES_COLORATE, SPRINKLES_STELUTE};
