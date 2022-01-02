@@ -27,6 +27,7 @@ public:
 
     virtual float calculPret() const;
     friend std::ostream& operator<<(std::ostream& os, const Prajitura& prajitura);
+    friend class builder_prajitura;
 };
 
 

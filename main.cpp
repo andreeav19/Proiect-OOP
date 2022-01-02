@@ -10,6 +10,7 @@
 #include "exceptii.h"
 #include <memory>
 #include "template.h"
+#include "builder_prajitura.h"
 
 int main() {
 /*
@@ -184,12 +185,23 @@ int main() {
 */
 
 //  Verificare clasa template
- /*   Prajitura p;
-    Informatii<Prajitura> infoP(p, "Zi de nastere");
+
+    Prajitura p;
+    Informatii<Prajitura> infoP(p, "Prajitura pentru zi de nastere");
     infoP.afisare();
-*/
-    std::string s = "incercare";
-    Informatii<std::string> infoS(s, "ca sa vedem daca merge");
- //   infoS.afisare();
+
+    Angajat a;
+    Informatii<Angajat> infoA(a, "Angajat gmail: nume_prenume123@gmail.com");
+    infoA.afisare();
+
+    Briosa b;
+    Informatii<Briosa> infoB(b, "Briose pentru petrecere de Halloween");
+
+//  Verificare design pattern builder
+
+    builder_prajitura buildp;
+    Prajitura p2 = buildp.nume("prajitura2").timpPreparare(80).numarBucati(2).pretBaza(70).build();
+    Prajitura p3 = buildp.nume("prajitura3").timpPreparare(80).numarBucati(2).pretBaza(70).build();
+    std::cout<<"\n\n\n"<<p2<<"\n"<<p3;
 
 }
