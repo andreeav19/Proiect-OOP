@@ -28,16 +28,12 @@ public:
     builder_prajitura& pretBaza(float pret) {
         prajitura.pretBaza = pret;
         return *this;
-    }/*
-    builder_prajitura& id() {
-        prajitura.id = Prajitura::id_max;
-        Prajitura::id_max++;
-        return *this;
-    }*/
+    }
 
     Prajitura build() {
-        //Prajitura::id_max++;
-        return prajitura;
+        Prajitura prajitura_noua;
+        prajitura_noua = prajitura;     // Pentru a asigura numerotarea corecta a id-urilor
+        return prajitura_noua;
     }
 };
 

@@ -202,6 +202,7 @@ int main() {
     builder_prajitura buildp;
     Prajitura p2 = buildp.nume("prajitura2").timpPreparare(80).numarBucati(2).pretBaza(70).build();
     Prajitura p3 = buildp.nume("prajitura3").timpPreparare(80).numarBucati(2).pretBaza(70).build();
-    std::cout<<"\n\n\n"<<p2<<"\n"<<p3;
+    Prajitura p4 = buildp.nume("prajitura4").timpPreparare(80).numarBucati(2).pretBaza(70).build();
+    std::cout<<"\n\n\n"<<p2<<"\n"<<p3<<"\n"<<p4;
 
 }
