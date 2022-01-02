@@ -19,5 +19,21 @@ public:
 
 };
 
+template<class T>
+Informatii<T>::Informatii(const T &obiect, const std::string &text) {
+    ob = obiect;
+    info = text;
+}
+
+template<class T>
+Informatii<T>::~Informatii() {
+    std::cout<<"Destructor: class template";
+}
+
+template<class T>
+void Informatii<T>::afisare() {
+    std::cout<<"Informatii despre datele introduse: "<<this->info<<"\n";
+}
+
 
 #endif //PROIECT_OOP_TEMPLATE_H
