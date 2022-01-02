@@ -12,7 +12,7 @@ Curier::Curier() : Angajat(){
 
 Curier::Curier(const std::string &nume_, const std::string &prenume_, const int salariu_, const int oreZi_,
                const int idComanda, const std::string &nrInm)
-        : Angajat(nume_, prenume_, salariu_, oreZi_){
+               : Angajat(nume_, prenume_, salariu_, oreZi_){
     this->id_comanda = idComanda;
     this->nrInmatriculare = nrInm;
 

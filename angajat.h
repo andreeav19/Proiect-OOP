@@ -10,6 +10,7 @@
 #include <string>
 #include <ostream>
 #include <string>
+#include "comanda.h"
 
 class Angajat{
 protected:
