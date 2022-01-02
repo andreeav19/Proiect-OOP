@@ -7,6 +7,7 @@
 
 
 #include <stdexcept>
+#include <string>
 
 class eroare_tort : public std::logic_error {
 public:
