@@ -9,6 +9,7 @@
 #include "cofetar.h"
 #include "exceptii.h"
 #include <memory>
+#include "template.h"
 
 int main() {
 /*
@@ -57,6 +58,7 @@ int main() {
 
 */
 
+/*
 //  Verificare clasa Tort:
     Tort tort1;
     std::cout<<tort1;
@@ -179,5 +181,15 @@ int main() {
     } catch (const std::exception& eroare) {
         std::cout<<eroare.what()<<"\n";
     }
+*/
+
+//  Verificare clasa template
+ /*   Prajitura p;
+    Informatii<Prajitura> infoP(p, "Zi de nastere");
+    infoP.afisare();
+*/
+    std::string s = "incercare";
+    Informatii<std::string> infoS(s, "ca sa vedem daca merge");
+ //   infoS.afisare();
 
 }
