@@ -15,9 +15,9 @@
 
 #### Cerințe
 - [x] definirea a minim 3 clase
-  - [x] <clasa 1>
-  - [x] <clasa 2>
-  - [x] <clasa 3>
+  - [x] <clasa 1 - Prajitura>
+  - [x] <clasa 2 - Comanda>
+  - [x] <clasa 3 - Angajat>
 - [x] constructori de inițializare
 - [x] constructor de copiere sau cc (pt minim o clasă)
 - [x] `operator=` sau op= (pt minim o clasă, aceeași unde s-a făcut cc și destructor)
@@ -29,7 +29,7 @@
   - [x] <a doua funcționalitate>
 - [x] scenariu de utilizare a claselor definite: apelarea din `main` a tuturor funcțiilor _publice_ definite (nu generați constructori/getteri/setteri dacă nu aveți nevoie de ei); apelarea se va face direct sau indirect - adică din `main` se pot apela funcții care construiesc obiecte cu clasele definite și folosesc aceste obiecte
 - [ ] după ce e gata prima temă, tag de `git`: de exemplu `v0.1`
-- [ ] GitHub Actions sau alt serviciu de CI (Continuous Integration) - exemplu [aici](https://github.com/mcmarius/demo-poo/blob/master/.github/workflows/cmake.yml) (a se vedea și `CMakeLists.txt` din același repo pt compiler flags)
+- [x] GitHub Actions sau alt serviciu de CI (Continuous Integration) - exemplu [aici](https://github.com/mcmarius/demo-poo/blob/master/.github/workflows/cmake.yml) (a se vedea și `CMakeLists.txt` din același repo pt compiler flags)
 
 ## Tema 2
 
@@ -62,8 +62,8 @@
 - săptămâna 12 (22-29 decembrie): (eventuale) modificări în urma feedback-ului
 
 #### Cerințe
-- [ ] 2 design patterns
-- [ ] funcții și clase șablon (`template`)
+- [x] 2 design patterns
+- [x] funcții și clase șablon (`template`)
 - [ ] un ultim (?) tag de `git`: de exemplu `v0.3` sau `v1.0`
 
 ## Resurse
