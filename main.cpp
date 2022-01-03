@@ -197,6 +197,7 @@ int main() {
 
     Briosa b;
     Informatii<Briosa> infoB(b, "Briose pentru petrecere de Halloween");
+    infoB.afisare();
 
 //  Verificare design pattern builder
 

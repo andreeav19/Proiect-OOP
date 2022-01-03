@@ -21,7 +21,7 @@ public:
         std::cout<<"Destructor: class template\n";
     };
     void afisare() {
-        std::cout<<"Informatii despre datele introduse: "<<this->info<<"\n";
+        std::cout<<"Informatii despre datele introduse: "<<this->info<<"\n"<<ob;
     };
 
 };
