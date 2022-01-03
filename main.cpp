@@ -188,11 +188,11 @@ int main() {
 //  Verificare clasa template
 
     Prajitura p;
-    Informatii<Prajitura> infoP(p, "Prajitura pentru zi de nastere");
+    Informatii<Prajitura> infoP(p, "Prajitura pentru zi de nastere", true);
     infoP.afisare();
 
     Angajat a;
-    Informatii<Angajat> infoA(a, "Angajat gmail: nume_prenume123@gmail.com");
+    Informatii<Angajat> infoA(a, "gmail - nume_prenume123@gmail.com", "Comunicare buna, etc.\n");
     infoA.afisare();
 
     Briosa b;

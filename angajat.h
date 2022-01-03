@@ -29,7 +29,7 @@ public:
     virtual ~Angajat();
 
     friend std::ostream &operator<<(std::ostream &os, const Angajat &angajat);
-
+    template<class T> friend class Informatii;
 };
 
 #endif //PROIECT_OOP_ANGAJAT_H
