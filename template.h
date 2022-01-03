@@ -62,7 +62,7 @@ public:
     }
     void afisare(){
         std::cout<<"\nInformatii prajitura: "<<info<<"\n";
-        vegan ? std::cout<<"Prajitura vegana\n" : std::cout<<"Prajitura nonvegana\n";
+        vegan ? std::cout<<"Prajitura vegana\n" : std::cout<<"Prajitura non-vegana\n";
     }
 };
 
