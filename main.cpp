@@ -11,6 +11,7 @@
 #include <memory>
 #include "template.h"
 #include "builder_prajitura.h"
+#include "factory_briose.h"
 
 int main() {
 /*
@@ -204,5 +205,14 @@ int main() {
     Prajitura p3 = buildp.nume("prajitura3").timpPreparare(80).numarBucati(2).pretBaza(70).build();
     Prajitura p4 = buildp.nume("prajitura4").timpPreparare(80).numarBucati(2).pretBaza(70).build();
     std::cout<<"\n\n\n"<<p2<<"\n"<<p3<<"\n"<<p4;
+
+//  Verificare design pattern factory
+
+    Briosa br1 = factory_briose::ciocolata();
+    Briosa br2 = factory_briose::ciocolata_si_rom();
+    Briosa br3 = factory_briose::lamaie();
+    Briosa br4 = factory_briose::vanilie();
+
+    std::cout<<"\n\n\n"<<br1<<"\n"<<br2<<"\n"<<br3<<"\n"<<br4<<"\n";
 
 }
